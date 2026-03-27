@@ -1,65 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Login</title>
 
-<title>Login-Mix Conveniência</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url("images/background-pattern.png");
+    }
 
+
+    .card-login {
+      max-width: 500px;
+      margin: 80px auto;
+      padding: 30px;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn-confirmar {
+      background-color: #013A8C ;
+      color: white;
+    }
+
+    .btn-confirmar:hover {
+      background-color: #013A8C ;
+    }
+
+    .link-senha {
+      font-size: 14px;
+      text-decoration: underline;
+      color: #555;
+    }
+  </style>
 </head>
 
-<body class="bg-light">
-    
+<body>
 
-<div class="container ">
+  <!-- Barra  topo -->
+  <div class="top-bar d-flex align-items-center px-4 text-white">
+    <!-- Canto esquerdo da tela -->
+  </div>
 
-<div class="row justify-content-center mt-5 pt-5"> 
 
-<div class="col-md-4">
+  <div class="card-login text-center">
 
-<div class="card shadow rounded-1">  
+    <h2 class="mb-4 fw-bold"> <h5 class="m-0"> <img src="images/mixsemfundo.png" width="100" class="rounded mx-auto d-block" alt="logo"> </h5></h2>
 
-<div class="card-body">
+    <div class="d-flex justify-content-center mb-4 gap-4">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="tipo" checked>
+        <label class="form-check-label"> Cliente </label>
+      </div>
 
-<h3 class="text-center mb-4"></h3>
-<img src="images/mixsemfundo.png" width="150" class="rounded mx-auto d-block" alt="logo">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="tipo">
+        <label class="form-check-label">Funcionário</label>
+      </div>
+    </div>
 
-<form>
+   
+    <form>
+      <div class="mb-3 text-start">
+        <label class="form-label fw-bold">Usuário</label>
+        <input type="text" class="form-control" placeholder="Digite seu email">
+      </div>
 
-<div class="mb-3">
-<label class="form-label">Email</label>
-<input type="email" class="form-control rounded-1" placeholder="Digite seu email">
-</div>
+      <div class="mb-3 text-start">
+        <label class="form-label fw-bold">Senha</label>
+        <input type="password" class="form-control" placeholder="Digite sua senha">
+      </div>
 
-<div class="mb-3">
-<label class="form-label">Senha</label>
-<input type="password" class="form-control rounded-1" placeholder="Digite sua senha">
-</div>
+      <button class="btn btn-confirmar w-100 mt-3">CONFIRMAR</button>
+    </form>
 
-<button type="submit" class="btn btn-primary w-100 rounded-1">
-Entrar
-</button>
+    <div class="mt-4">
+      <a href="cadastro.html" class="link-senha">Primeiro Acesso? Cadastre-se.</a><br>
+      <a href="#" class="link-senha">Esqueci Minha Senha.</a>
+    </div>
 
-<div class="text-center mt-3">
-<a href="cadastro.html">Criar conta</a>
-</div>
+  </div>
 
-</form>
-
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<br>
-<footer>
-    <p style="text-align: center;">Portal Mix Conveniência </p>
-<p style="text-align: center;"> Aviso de Privacidade - © Copyright 2025-2026 Mix - Todos os direitos reservados </p>
-</footer>
+  <div class="rodape text-white text-center py-4 mt-5">
+    <p class="m-0"> <strong style="color: black;">  © 7Mind 2026 -  Mix Conveniência </strong> </p>
+  </div>
 
 </body>
 </html>
