@@ -674,6 +674,9 @@ h1,h2,h3,h4,h5,h6 {
   .offcanvas-body .nav-item {
     font-weight: 700;
     border-bottom: 1px solid #d1d1d1;
+    width: auto; 
+    border: none;
+    text-align: center;
   }
   .offcanvas-body .filter-categories {
     width: 100%;
@@ -681,7 +684,21 @@ h1,h2,h3,h4,h5,h6 {
     border: 1px solid #d1d1d1 !important;
     padding: 14px;
     border-radius: 8px;
+    text-align: center;
   }
+  .offcanvas-body .nav-link {
+  font-size: 18px;
+  padding: 10px 0;
+  font-weight: 600;
+  padding: 10px 15px;
+}
+
+.offcanvas-body .navbar-nav {
+  flex-direction: row !important;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
   /* dropdown-menu */
   .dropdown-menu {
     padding: 0;
@@ -720,3 +737,4 @@ h1,h2,h3,h4,h5,h6 {
     height: 740px;
   }
 }
+

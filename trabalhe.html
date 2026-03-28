@@ -1,11 +1,174 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhe Conosco</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f4f4f4;
+    }
+
+    .container-box {
+      width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    .titulo {
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      color: #013a8c;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .section {
+      background: #013a8c;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .btn-custom {
+      background: #013a8c;
+      color: white;
+    }
+
+    .btn-custom:hover {
+      background: #012f6b;
+      color: white;
+    }
+  </style>
 </head>
+
 <body>
-    
+
+<div class="container-box">
+
+  <div class="titulo">Trabalhe Conosco</div>
+
+  <form action="sucesso.html" method="POST">
+
+    <!-- DADOS PESSOAIS -->
+    <div class="section">Dados Pessoais</div>
+
+    <div class="row mt-2">
+      <div class="col">
+        <label>Nome</label>
+        <input type="text" class="form-control" name="nome">
+      </div>
+
+      <div class="col">
+        <label>Sobrenome</label>
+        <input type="text" class="form-control" name="sobrenome">
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col">
+        <label>E-mail</label>
+        <input type="email" class="form-control" name="email">
+      </div>
+
+      <div class="col">
+        <label>Telefone</label>
+        <input type="tel" class="form-control" name="telefone">
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col">
+        <label>Data de Nascimento</label>
+        <input type="date" class="form-control" name="nascimento">
+      </div>
+
+      <div class="col">
+        <label>Cidade</label>
+        <input type="text" class="form-control" name="cidade">
+      </div>
+    </div>
+
+    <!-- DADOS PROFISSIONAIS -->
+    <div class="section">Dados Profissionais</div>
+
+    <div class="row mt-2">
+      <div class="col">
+        <label>Cargo Desejado</label>
+        <input type="text" class="form-control" name="cargo">
+      </div>
+
+      <div class="col">
+        <label>Área</label>
+        <select class="form-control" name="area">
+          <option>Selecione</option>
+          <option>Atendimento</option>
+          <option>Caixa</option>
+          <option>Estoque</option>
+          <option>Administrativo</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col">
+        <label>Pretensão Salarial</label>
+        <input type="number" class="form-control" name="salario">
+      </div>
+
+      <div class="col">
+        <label>Disponibilidade</label>
+        <select class="form-control" name="disponibilidade">
+          <option>Selecione</option>
+           <option>Estágio</option>
+          <option>Integral</option>
+          <option>Meio período</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- EXPERIÊNCIA -->
+    <div class="section">Experiência</div>
+
+    <div class="mt-2">
+      <label>Descreva sua experiência</label>
+      <textarea class="form-control" rows="3" name="experiencia"></textarea>
+    </div>
+
+    <!-- CURRÍCULO -->
+    <div class="section">Currículo</div>
+
+    <div class="mt-2">
+      <label>Anexar Currículo</label>
+      <input type="file" class="form-control" name="curriculo">
+    </div>
+
+    <!-- BOTÕES -->
+    <div class="d-flex justify-content-end mt-4 gap-2">
+      <button type="reset" class="btn btn-secondary">Cancelar</button>
+
+      <button type="submit" class="btn btn-custom">
+        Enviar Currículo
+      </button>
+    </div>
+
+  </form>
+
+</div>
+<div id="footer-bottom">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 copyright">
+            <p>© Mix Conveniência. Todos os direitos reservados. </p>
+          </div>
+
 </body>
 </html>
