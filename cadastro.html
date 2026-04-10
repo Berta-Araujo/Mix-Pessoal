@@ -86,15 +86,10 @@
 
   <body class="bg-light">
     <div class="container">
-      <!-- LOGO -->
+      
       <div class="text-center mb-4">
         <a href="index.html">
-          <img
-            src="images/mixsemfundo.png"
-            width="150"
-            class="rounded"
-            alt="logo"
-          />
+          <img src="images/mixsemfundo.png" width="150" class="rounded" alt="logo"/>
         </a>
       </div>
 
@@ -102,7 +97,6 @@
 
       <div class="cadastro">Cadastre-se</div>
 
-    
       <form action="sucesso.html" method="POST">
         
         <div class="section">Dados de Login</div>
@@ -110,106 +104,60 @@
         <div class="row">
           <div class="col">
             <label class="fw-bold">CPF</label>
-            <input
-              type="text"
-              class="form-control"
-              name="cpf"
-              placeholder="000.000.000-00"
-            />
+            <input type="text" class="form-control" name="cpf" placeholder="000.000.000-00"/>
           </div>
 
           <div class="col">
             <label>Nome de Usuário</label>
-            <input
-              type="text"
-              class="form-control"
-              name="usuario"
-              placeholder="Digite seu nome de usuário"
-            />
+            <input type="text" class="form-control" name="usuario"/>
           </div>
         </div>
 
         <div class="row">
           <div class="col">
             <label>E-mail</label>
-            <input
-              type="email"
-              class="form-control"
-              name="email"
-              placeholder="usuario@email.com"
-            />
+            <input type="email" class="form-control" name="email"/>
           </div>
 
           <div class="col">
             <label>Confirmar E-mail</label>
-            <input
-              type="email"
-              class="form-control"
-              name="confirmar_email"
-              placeholder="usuario@email.com"
-            />
+            <input type="email" class="form-control" name="confirmar_email"/>
           </div>
 
           <div class="col">
             <label>Senha</label>
-            <input
-              type="password"
-              class="form-control"
-              name="senha"
-              placeholder="8 a 15 dígitos"
-            />
+            <input type="password" class="form-control" name="senha"/>
           </div>
 
           <div class="col">
             <label>Confirmar Senha</label>
-            <input
-              type="password"
-              class="form-control"
-              name="confirmar_senha"
-              placeholder="Repita a senha"
-            />
+            <input type="password" class="form-control" name="confirmar_senha"/>
           </div>
         </div>
 
-        
         <div class="section">Dados de Contato</div>
 
         <div class="row">
           <div class="col">
             <label>Nome</label>
-            <input
-              type="text"
-              class="form-control"
-              name="nome"
-              placeholder="Digite seu nome"
-            />
+            <input type="text" class="form-control" name="nome"/>
           </div>
 
           <div class="col">
             <label>Sobrenome</label>
-            <input
-              type="text"
-              class="form-control"
-              name="sobrenome"
-              placeholder="Digite seu sobrenome"
-            />
+            <input type="text" class="form-control" name="sobrenome"/>
           </div>
         </div>
 
         <div class="row">
           <div class="col">
             <label>Data de Nascimento</label>
-            <input type="date" class="form-control" name="dataNascimento" />
+            <input type="date" class="form-control" name="dataNascimento"/>
           </div>
 
           <div class="col">
             <label>RG</label>
-            <input
-              type="text"
-              class="form-control"
-              name="rg"
-              placeholder="Digite seu RG"
-            />
+            <input type="text" class="form-control" name="rg"/>
           </div>
 
           <div class="col">
@@ -223,143 +171,105 @@
           </div>
         </div>
 
-       
+        <!-- CEP -->
         <div class="row">
           <div class="col">
             <label>CEP</label>
-            <input
-              type="text"
-              class="form-control"
-              name="cep"
-              placeholder="Digite seu CEP"
-            />
+            <input type="text" class="form-control" id="cep" placeholder="Digite seu CEP"/>
           </div>
 
           <div class="col-2">
             <label>Endereço</label>
-            <input
-              type="text"
-              class="form-control"
-              name="endereco"
-              placeholder="Digite seu endereço completo"
-            />
+            <input type="text" class="form-control" id="endereco"/>
           </div>
 
           <div class="col">
             <label>Número</label>
-            <input
-              type="text"
-              class="form-control"
-              name="numero"
-              placeholder="Nº da residência"
-            />
+            <input type="text" class="form-control" name="numero"/>
           </div>
         </div>
 
         <div class="row">
           <div class="col">
             <label>Bairro</label>
-            <input
-              type="text"
-              class="form-control"
-              name="bairro"
-              placeholder="Digite seu bairro"
-            />
+            <input type="text" class="form-control" id="bairro"/>
           </div>
 
           <div class="col">
             <label>Complemento</label>
-            <input
-              type="text"
-              class="form-control"
-              name="complemento"
-              placeholder="Complemento"
-            />
+            <input type="text" class="form-control" name="complemento"/>
           </div>
 
           <div class="col">
             <label>Cidade</label>
-            <input
-              type="text"
-              class="form-control"
-              name="cidade"
-              placeholder="Digite sua cidade"
-            />
+            <input type="text" class="form-control" id="cidade"/>
           </div>
         </div>
 
         <div class="row">
           <div class="col">
             <label>Estado</label>
-            <select class="form-control" name="estado">
+            <select class="form-control" id="estado">
               <option>Selecione</option>
-              <option>AC</option>
-              <option>AL</option>
-              <option>AP</option>
-              <option>AM</option>
-              <option>BA</option>
-              <option>CE</option>
-              <option>DF</option>
-              <option>ES</option>
-              <option>GO</option>
-              <option>MA</option>
-              <option>MT</option>
-              <option>MS</option>
-              <option>MG</option>
-              <option>PA</option>
-              <option>PB</option>
-              <option>PR</option>
-              <option>PE</option>
-              <option>PI</option>
-              <option>RJ</option>
-              <option>RN</option>
-              <option>RS</option>
-              <option>RO</option>
-              <option>RR</option>
-              <option>SC</option>
-              <option>SP</option>
-              <option>SE</option>
-              <option>TO</option>
+              <option>AC</option><option>AL</option><option>AP</option>
+              <option>AM</option><option>BA</option><option>CE</option>
+              <option>DF</option><option>ES</option><option>GO</option>
+              <option>MA</option><option>MT</option><option>MS</option>
+              <option>MG</option><option>PA</option><option>PB</option>
+              <option>PR</option><option>PE</option><option>PI</option>
+              <option>RJ</option><option>RN</option><option>RS</option>
+              <option>RO</option><option>RR</option><option>SC</option>
+              <option>SP</option><option>SE</option><option>TO</option>
             </select>
           </div>
 
           <div class="col">
             <label>Telefone</label>
-            <input
-              type="tel"
-              class="form-control"
-              name="telefone"
-              placeholder="(DDD) Telefone"
-            />
+            <input type="tel" class="form-control" name="telefone"/>
           </div>
 
           <div class="col">
             <label>Celular</label>
-            <input
-              type="tel"
-              class="form-control"
-              name="celular"
-              placeholder="(DDD) Celular"
-            />
+            <input type="tel" class="form-control" name="celular"/>
           </div>
         </div>
 
         <div class="d-flex justify-content-end mt-4">
-          <button
-            type="submit"
-            class="btn text-white"
-            style="background: #013a8c"
-          >
+          <button type="submit" class="btn text-white" style="background: #013a8c">
             Cadastrar
           </button>
         </div>
       </form>
     </div>
-    <div id="footer-bottom">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 copyright">
-            <p>© Mix Conveniência. Todos os direitos reservados. </p>
-          </div>
+
+   
+    <script>
+      document.getElementById("cep").addEventListener("blur", function () {
+        let cep = this.value.replace(/\D/g, "");
+
+        if (cep.length !== 8) {
+          alert("CEP inválido!");
+          return;
+        }
+
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+          .then((res) => res.json())
+          .then((dados) => {
+            if (dados.erro) {
+              alert("CEP não encontrado!");
+              return;
+            }
+
+            document.getElementById("endereco").value = dados.logradouro;
+            document.getElementById("bairro").value = dados.bairro;
+            document.getElementById("cidade").value = dados.localidade;
+            document.getElementById("estado").value = dados.uf;
+          })
+          .catch(() => {
+            alert("Erro ao buscar CEP!");
+          });
+      });
+    </script>
+
   </body>
 </html>

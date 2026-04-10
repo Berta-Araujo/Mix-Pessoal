@@ -11,7 +11,6 @@
       background-image: url("images/background-pattern.png");
     }
 
-
     .card-login {
       max-width: 500px;
       margin: 80px auto;
@@ -22,12 +21,12 @@
     }
 
     .btn-confirmar {
-      background-color: #013A8C ;
+      background-color: #013A8C;
       color: white;
     }
 
     .btn-confirmar:hover {
-      background-color: #013A8C ;
+      background-color: #013A8C;
     }
 
     .link-senha {
@@ -40,55 +39,65 @@
 
 <body>
 
-  <div class="top-bar d-flex align-items-center px-4 text-white">
-  
-  </div>
-
-
   <div class="card-login text-center">
 
-    
-    <a href="index.html"><h2 class="mb-4 fw-bold"> <h5 class="m-0"> <img src="images/mixsemfundo.png" width="100" class="rounded mx-auto d-block" alt="logo"></a> </h5></h2>
+    <a href="index.html">
+      <img src="images/mixsemfundo.png" width="100" class="rounded mx-auto d-block mb-3" alt="logo">
+    </a>
 
+    <!-- TIPO DE USUÁRIO -->
     <div class="d-flex justify-content-center mb-4 gap-4">
+      
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="tipo" checked>
-        <label class="form-check-label"> Cliente </label>
+        <input class="form-check-input" type="radio" name="tipo" value="cliente" id="cliente" checked>
+        <label class="form-check-label" for="cliente">Cliente</label>
       </div>
 
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="tipo">
-        <label class="form-check-label">Funcionário</label>
+        <input class="form-check-input" type="radio" name="tipo" value="admin" id="admin">
+        <label class="form-check-label" for="admin">Administrador</label>
       </div>
+
     </div>
 
-   
-    <form>
+    <!-- FORM -->
+    <form onsubmit="return redirecionar(event)">
+      
       <div class="mb-3 text-start">
         <label class="form-label fw-bold">Usuário</label>
-        <input type="text" class="form-control" placeholder="Digite seu email">
+        <input type="text" class="form-control" placeholder="Digite seu email" required>
       </div>
 
       <div class="mb-3 text-start">
         <label class="form-label fw-bold">Senha</label>
-        <input type="password" class="form-control" placeholder="Digite sua senha">
+        <input type="password" class="form-control" placeholder="Digite sua senha" required>
       </div>
 
       <button class="btn btn-confirmar w-100 mt-3">CONFIRMAR</button>
+
     </form>
 
     <div class="mt-4">
       <a href="cadastro.html" class="link-senha">Primeiro Acesso? Cadastre-se.</a><br>
-      <a href="#" class="link-senha">Esqueci Minha Senha.</a>
+      <a href="redefinirsenha.html" class="link-senha">Esqueci Minha Senha.</a>
     </div>
 
   </div>
 
- <div id="footer-bottom">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 copyright">
-            <p>© Mix Conveniência. Todos os direitos reservados. </p>
-          </div>
+  <!-- SCRIPT -->
+  <script>
+    function redirecionar(event) {
+      event.preventDefault();
+
+      let tipo = document.querySelector('input[name="tipo"]:checked').value;
+
+      if (tipo === "admin") {
+        window.location.href = "admin.html";
+      } else {
+        window.location.href = "index.html";
+      }
+    }
+  </script>
+
 </body>
 </html>
