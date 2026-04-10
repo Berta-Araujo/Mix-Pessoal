@@ -1,89 +1,199 @@
-<!-- CONFIGURAR -->
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Painel Admin</title>
+<title>Painel Gerenciador - Áges </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-body { margin:0; font-family: Arial; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
 
+body {
+  display: flex;
+  background: #f5f6fa;
+}
+
+/* SIDEBAR (SEU PRIMEIRO CODIGO) */
 .sidebar {
-  width:80px; height:100vh; background:#013A8C;
-  position:fixed; display:flex; flex-direction:column; align-items:center;
+  width: 250px;
+  height: 100vh;
+  background: #1e2a38;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
 }
-.sidebar div { width:40px; height:5px; background:#ccc; margin:10px; }
 
+.logo {
+  padding: 20px;
+  background: #00bfa6;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.menu {
+  list-style: none;
+  padding: 10px;
+}
+
+.menu li {
+  padding: 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.menu li:hover {
+  background: #2f3e4f;
+}
+
+.menu .active {
+  background: #2f3e4f;
+}
+
+.badge {
+  background: red;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.bottom {
+  padding: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* TOPO */
 .topbar {
-  margin-left:80px; height:60px; background:#e5e5e5;
-  display:flex; align-items:center; justify-content:space-between; padding:0 20px;
+  margin-left: 250px;
+  height: 60px;
+  background: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
+/* CONTEÚDO */
 .content {
-  margin-left:80px; padding:20px; background:#f5f5f5; min-height:100vh;
+  margin-left: 250px;
+  padding: 20px;
+  width: 100%;
 }
 
+/* TABS */
 .tabs button {
-  background:#013A8C; color:white; border:none; padding:10px;
+  background: #013A8C;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-right: 5px;
 }
-.tabs .active { background:#013A8C; }
 
-.btn-nova { background:#013A8C; color:white; }
+.tabs .active {
+  background: #013A8C;
+}
 
-.table-area { background:white; padding:10px; }
+.btn-nova {
+  background: #013A8C;
+  color: white;
+}
+
+.table-area {
+  background: white;
+  padding: 10px;
+}
 </style>
 </head>
 
 <body>
-<!--  MELHORAR ISSO...
-<div class="sidebar">
-  <div>Produtos</div><hr>
-  <div> Pessoas </div><hr>
-  <div>Financeiro</div><hr>
-</div>-->
 
+<!-- SIDEBAR -->
+<ul class="menu">
+  <li class="active" onclick="trocarPagina('home', this)"> Home</li>
+  <li onclick="trocarPagina('inicio', this)">•Início</li>
+  <li onclick="trocarPagina('pessoas', this)">•Pessoas</li>
+  <li onclick="trocarPagina('produtos', this)">•Produtos</li>
+  <li onclick="trocarPagina('financeiro', this)">•Financeiro</li>
+  <li onclick="trocarPagina('categoria', this)">•Categoria</li>
+  <li onclick="sair()">•Sair</li>
+</ul>
+
+<!-- TOPBAR -->
 <div class="topbar">
-  <img src="images/mixsemfundo.png" width="50">
+  <img src="https://via.placeholder.com/50">
   <input type="text" class="form-control w-25" placeholder="Buscar..." id="busca">
   <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" width="30">
 </div>
 
+<!-- CONTEÚDO -->
 <div class="content">
 
-<h5>Produtos e serviços</h5>
-
-<div class="tabs mb-3">
-  <button onclick="trocarAba('produtos', this)" class="active">Produtos</button>
-  <button onclick="trocarAba('servicos', this)">Serviços</button>
-  <button onclick="trocarAba('estoque', this)">Estoque</button>
+<!-- HOME -->
+<div id="home" class="pagina">
+  <h2>ÁGes - Gestão inteligente do seu negócio! </h2>
+  <p>Esse é seu painel inicial</p>
 </div>
 
-<div class="d-flex justify-content-between mb-2">
-  <button class="btn btn-nova" data-bs-toggle="modal" data-bs-target="#modal">+ Nova</button>
+<!-- PRODUTOS (SEU SISTEMA) -->
+<div id="produtos" class="pagina" style="display:none;">
+
+  <h5>Produtos e serviços</h5>
+
+  <div class="tabs mb-3">
+    <button onclick="trocarAba('produtos', this)" class="active">Produtos</button>
+    <button onclick="trocarAba('servicos', this)">Serviços</button>
+    <button onclick="trocarAba('estoque', this)">Estoque</button>
+  </div>
+
+  <div class="d-flex justify-content-between mb-2">
+    <button class="btn btn-nova" data-bs-toggle="modal" data-bs-target="#modal">+ Nova</button>
+  </div>
+
+  <div class="table-area">
+    <table class="table" id="tabela">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>Estoque</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
 </div>
 
-<div class="table-area">
-<table class="table" id="tabela">
-<thead>
-<tr>
-<th>Nome</th>
-<th>Preço</th>
-<th>Estoque</th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
+<!-- PESSOAS -->
+<div id="pessoas" class="pagina" style="display:none;">
+  <h2>👩‍💼 Pessoas</h2>
+  <p>Aqui você pode gerenciar usuários</p>
+</div>
+
+<!-- FINANCEIRO -->
+<div id="financeiro" class="pagina" style="display:none;">
+  <h2>💰 Financeiro</h2>
+  <p>Controle de dinheiro aqui</p>
 </div>
 
 </div>
 
-
+<!-- MODAL -->
 <div class="modal fade" id="modal">
 <div class="modal-dialog">
 <div class="modal-content p-3">
@@ -112,7 +222,6 @@ let dados = {
 
 let abaAtual = "produtos";
 
-
 function trocarAba(tipo, botao) {
   abaAtual = tipo;
 
@@ -121,7 +230,6 @@ function trocarAba(tipo, botao) {
 
   renderizar();
 }
-
 
 function adicionar() {
   let nome = document.getElementById("nome").value;
@@ -139,7 +247,6 @@ function adicionar() {
   renderizar();
 }
 
-
 function renderizar() {
   let tbody = document.querySelector("#tabela tbody");
   tbody.innerHTML = "";
@@ -155,7 +262,6 @@ function renderizar() {
   });
 }
 
-
 document.getElementById("busca").addEventListener("input", function() {
   let valor = this.value.toLowerCase();
   let linhas = document.querySelectorAll("#tabela tbody tr");
@@ -165,6 +271,30 @@ document.getElementById("busca").addEventListener("input", function() {
   });
 });
 
+function trocarPagina(pagina, elemento) {
+
+  // esconder todas
+  document.querySelectorAll(".pagina").forEach(p => {
+    p.style.display = "none";
+  });
+
+  // mostrar a escolhida
+  document.getElementById(pagina).style.display = "block";
+
+  // remover active
+  document.querySelectorAll(".menu li").forEach(li => {
+    li.classList.remove("active");
+  });
+
+  // adicionar active no clicado
+  elemento.classList.add("active");
+}
+
+function sair() {
+  alert("Saindo do sistema...");
+  // depois você pode fazer:
+  // window.location.href = "login.html"
+}
 </script>
 
 </body>
